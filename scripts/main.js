@@ -65,24 +65,31 @@ window.addEventListener('scroll', () => {
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-// Force dark mode by default - remove any light theme class
+
+// FORCE DARK MODE - Clear any saved light theme
+if (!localStorage.getItem('theme')) {
+    localStorage.setItem('theme', 'dark');
+    localStorage.setItem('Name', 'Oussama Naya');
+    console.log('FORCE DARK MODE');
+}
+
+// Remove light theme class to ensure dark mode
 body.classList.remove('light-theme');
 
-// Check for saved theme preference or default to dark
-const currentTheme = localStorage.getItem('theme') || 'dark';
+// Check for saved theme preference
+const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'light') {
     body.classList.add('light-theme');
     themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
 } else {
-    // Ensure dark mode icon is shown
+    // Dark mode (default)
+    body.classList.remove('light-theme');
     themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-    localStorage.setItem('theme', 'dark');
 }
 
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('light-theme');
-
-    // Update icon
+    // Update icon and save preference
     if (body.classList.contains('light-theme')) {
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         localStorage.setItem('theme', 'light');
@@ -220,19 +227,18 @@ style.textContent = `
 document.head.appendChild(style);
 
 // ===================================
-// Contact Form Handling
+// Contact Form Handling with EmailJS
 // ===================================
 const contactForm = document.getElementById('contact-form');
 
+// Initialize EmailJS
+// IMPORTANT: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key
+(function () {
+    emailjs.init("EAsq2pecWFl2IrI9F");
+})();
+
 contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    };
 
     // Get submit button
     const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -242,8 +248,12 @@ contactForm.addEventListener('submit', async (e) => {
     submitBtn.innerHTML = '<span>Envoi en cours...</span><i class="fas fa-spinner fa-spin"></i>';
     submitBtn.disabled = true;
 
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
+    try {
+        // Send email using EmailJS sendForm
+        // This takes the form element directy and uses the 'name' attributes:
+        // 'name', 'email', 'subject', 'message'
+        await emailjs.sendForm('service_esaydkt', 'template_bjsvnxr', '#contact-form');
+
         // Show success message
         submitBtn.innerHTML = '<span>Message envoyé!</span><i class="fas fa-check"></i>';
         submitBtn.style.background = 'linear-gradient(135deg, #00ff88 0%, #00d9ff 100%)';
@@ -251,16 +261,26 @@ contactForm.addEventListener('submit', async (e) => {
         // Reset form
         contactForm.reset();
 
+        // Show success notification
+        showNotification('Merci! Votre message a été envoyé avec succès.', 'success');
+
+    } catch (error) {
+        console.error('EmailJS Error:', error);
+
+        // Show error message on button
+        submitBtn.innerHTML = '<span>Erreur!</span><i class="fas fa-exclamation-triangle"></i>';
+        submitBtn.style.background = '#ff4444';
+
+        // Show error notification
+        showNotification('Une erreur est survenue lors de l\'envoi. Veuillez réessayer plus tard.', 'error');
+    } finally {
         // Reset button after 3 seconds
         setTimeout(() => {
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
             submitBtn.style.background = '';
         }, 3000);
-
-        // Show alert
-        showNotification('Merci! Votre message a été envoyé avec succès.', 'success');
-    }, 1500);
+    }
 });
 
 // Form validation with visual feedback
@@ -341,6 +361,46 @@ if (heroSubtitle) {
 
     // Start typing after page load
     setTimeout(typeWriter, 500);
+}
+
+// ===================================
+// Counter Animation for Stats
+// ===================================
+function animateCounter(element, target, duration = 2000, suffix = '+') {
+    const start = 0;
+    const increment = target / (duration / 16); // 60fps
+    let current = start;
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target + suffix;
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current) + suffix;
+        }
+    }, 16);
+}
+
+// Observe stats section and trigger animation when visible
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const targetValue = parseInt(stat.textContent);
+                const suffix = stat.textContent.includes('+') ? '+' : '';
+                animateCounter(stat, targetValue, 2000, suffix);
+            });
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+// Observe the stats container
+const statsContainer = document.querySelector('.about-stats');
+if (statsContainer) {
+    statsObserver.observe(statsContainer);
 }
 
 // ===================================
@@ -456,11 +516,47 @@ const imageObserver = new IntersectionObserver((entries, observer) => {
 images.forEach(img => imageObserver.observe(img));
 
 // ===================================
+// Project Filtering Logic
+// ===================================
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+if (filterBtns.length > 0) {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                card.classList.remove('show');
+                card.classList.add('hide');
+
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    setTimeout(() => {
+                        card.classList.remove('hide');
+                        card.classList.add('show');
+                    }, 10);
+                }
+            });
+        });
+    });
+}
+
+// ===================================
 // Initialize on Page Load
 // ===================================
 window.addEventListener('load', () => {
     // Add initial animations
     document.body.classList.add('loaded');
+
+    // Show all projects initially with animation
+    projectCards.forEach(card => {
+        card.classList.add('show');
+    });
 
     // Trigger scroll reveal for elements in viewport
     revealOnScroll();
