@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Oussama Naya - Junior Full Stack Web Developer & Data Scientist. Spécialisé en Java, Python, .NET, Angular, et Intelligence Artificielle.">
+    <meta name="keywords"
+        content="Full Stack Developer, Data Scientist, AI Engineer, Java, Python, .NET, Angular, Express.js">
+    <meta name="author" content="Oussama Naya">
+    <title>Oussama Naya | Full Stack Developer & AI Engineer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">ON.</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#about" class="nav-link">À Propos</a></li>
+                <li><a href="#testimonials" class="nav-link">Témoignages</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting">Bonjour, je suis</span>
+                    <span class="name">Oussama Naya</span>
+                </h1>
+                <p class="hero-subtitle">Full Stack Developer & AI Engineer</p>
+                <p class="hero-description">
+                    Passionné par la création d'expériences web modernes et l'intelligence artificielle.
+                    Spécialisé en Java, Python, .NET, Angular et technologies AI/ML.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Voir mes projets</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Me contacter</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://www.linkedin.com/in/oussama-naya-a4a398249/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/OussamaNaya" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:oussamanaya8@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Compétences Techniques</h2>
+            <p class="section-subtitle">Technologies et outils que je maîtrise</p>
+
+            <div class="skills-marquee">
+                <div class="marquee-content">
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">.NET</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">Express.js</span>
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag">Blazor</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Jenkins</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Deep Learning</span>
+                    <span class="skill-tag">NLP</span>
+                    <span class="skill-tag">Computer Vision</span>
+                    <span class="skill-tag">LLMs</span>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Développement Web</h3>
+                    <p>Full Stack avec Java, Python, .NET, Angular, Express.js</p>
+                    <div class="skill-list">
+                        <span>JEE</span>
+                        <span>Spring Boot</span>
+                        <span>Django</span>
+                        <span>Blazor</span>
+                        <span>Angular</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Intelligence Artificielle</h3>
+                    <p>ML, Deep Learning, NLP, Computer Vision, LLMs</p>
+                    <div class="skill-list">
+                        <span>TensorFlow</span>
+                        <span>PyTorch</span>
+                        <span>HuggingFace</span>
+                        <span>YOLOv8</span>
+                        <span>LangChain</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Bases de Données</h3>
+                    <p>SQL, NoSQL, Big Data</p>
+                    <div class="skill-list">
+                        <span>MySQL</span>
+                        <span>MongoDB</span>
+                        <span>Oracle</span>
+                        <span>Neo4j</span>
+                        <span>Hadoop</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>DevOps & Tools</h3>
+                    <p>CI/CD, Containerization, Cloud</p>
+                    <div class="skill-list">
+                        <span>Docker</span>
+                        <span>Jenkins</span>
+                        <span>Git</span>
+                        <span>Linux</span>
+                        <span>Kafka</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projets Réalisés</h2>
+            <p class="section-subtitle">Une sélection de mes meilleurs travaux</p>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project-exam.jpg" alt="Surveillance d'examens IA">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Plateforme de Surveillance d'Examens IA</h3>
+                        <p>Système de surveillance intelligent utilisant la vision par ordinateur pour détecter la
+                            triche en temps réel.</p>
+                        <div class="project-tags">
+                            <span>Django</span>
+                            <span>YOLOv8</span>
+                            <span>FastAPI</span>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project-chatbot.jpg" alt="ChatBot Enterprise">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ChatBot Enterprise (OMF Group)</h3>
+                        <p>Chatbots intelligents pour GEP et comptabilité avec extraction automatique de données de
+                            factures.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>LLMs</span>
+                            <span>OCR</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project-smartoffice.jpg" alt="Smart Office">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Office Management</h3>
+                        <p>Application web IoT pour la gestion intelligente de bureau avec monitoring en temps réel.</p>
+                        <div class="project-tags">
+                            <span>JEE</span>
+                            <span>MySQL</span>
+                            <span>IoT</span>
+                            <span>Arduino</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project-cicd.jpg" alt="CI/CD Pipeline">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Pipeline CI/CD avec Jenkins</h3>
+                        <p>Pipeline automatisé de déploiement pour applications Java avec tests et containerisation.</p>
+                        <div class="project-tags">
+                            <span>Jenkins</span>
+                            <span>Docker</span>
+                            <span>Java</span>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">À Propos de Moi</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="photo profile.jpeg.jpg" alt="Oussama Naya">
+                    <div class="about-image-border"></div>
+                </div>
+                <div class="about-text">
+                    <h3>Junior Full Stack Developer & AI Engineer</h3>
+                    <p>
+                        Titulaire d'un <strong>Master en Data Science & Big Data</strong> et d'une <strong>Licence en
+                            Informatique et Mathématiques Appliquées</strong>,
+                        je suis passionné par le développement d'applications web modernes et l'intelligence
+                        artificielle.
+                    </p>
+                    <p>
+                        Avec une expérience pratique en <strong>Java (JEE, Spring Boot)</strong>, <strong>Python
+                            (Django, Flask)</strong>,
+                        <strong>.NET (Blazor)</strong>, et <strong>Angular/Express.js</strong>, j'ai réalisé plusieurs
+                        projets concrets
+                        allant de la surveillance intelligente d'examens aux chatbots d'entreprise.
+                    </p>
+                    <p>
+                        Actuellement <strong>Développeur Full Stack chez EasySoft</strong>, je cherche constamment à
+                        apprendre
+                        et à relever de nouveaux défis techniques pour créer des solutions innovantes et performantes.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Années d'Études</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projets Réalisés</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">6+</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                    </div>
+
+                    <div class="about-certs">
+                        <h4>Certifications</h4>
+                        <ul>
+                            <li><i class="fas fa-certificate"></i> .NET Core MVC - The Complete Guide 2025</li>
+                            <li><i class="fas fa-certificate"></i> Multi AI Agent Systems with CrewAI</li>
+                            <li><i class="fas fa-certificate"></i> LLM Engineering: Master AI & Large Language Models
+                            </li>
+                            <li><i class="fas fa-certificate"></i> Docker Introduction</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Témoignages</h2>
+            <p class="section-subtitle">Ce que disent mes collaborateurs</p>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="testimonial-text">
+                            "Oussama a démontré une excellente maîtrise des technologies .NET et Blazor.
+                            Son approche méthodique et sa capacité à résoudre des problèmes complexes sont
+                            remarquables."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Mohamed Alami</h4>
+                            <p>Tech Lead - EasySoft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="testimonial-text">
+                            "Un développeur talentueux avec une forte expertise en IA et Machine Learning.
+                            Les chatbots qu'il a développés ont considérablement amélioré notre efficacité
+                            opérationnelle."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Bennani</h4>
+                            <p>Project Manager - Groupe OMF</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="testimonial-text">
+                            "Oussama est un étudiant brillant et motivé. Son projet de surveillance d'examens par IA
+                            était innovant et techniquement impressionnant."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Khalid Mansouri</h4>
+                            <p>Professeur - Faculté des Sciences Ben M'Sick</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-nav">
+                <button class="nav-btn prev-btn" id="prev-testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonials-dots" id="testimonials-dots"></div>
+                <button class="nav-btn next-btn" id="next-testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Travaillons Ensemble</h2>
+            <p class="section-subtitle">N'hésitez pas à me contacter pour discuter de vos projets</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:oussamanaya8@gmail.com">oussamanaya8@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <a href="tel:+212777672033">+212 777-672033</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Localisation</h4>
+                            <p>Casablanca, Maroc</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://www.linkedin.com/in/oussama-naya-a4a398249/" target="_blank"
+                            class="social-btn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/OussamaNaya" target="_blank" class="social-btn">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <span>Envoyer le message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Oussama Naya</h3>
+                    <p>Full Stack Developer & AI Engineer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Accueil</a>
+                    <a href="#skills">Compétences</a>
+                    <a href="#projects">Projets</a>
+                    <a href="#about">À Propos</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Oussama Naya. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
