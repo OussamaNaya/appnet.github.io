@@ -63,40 +63,35 @@ window.addEventListener('scroll', () => {
 // Theme Toggle (Dark/Light Mode)
 // ===================================
 const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
 
-
-// FORCE DARK MODE - Clear any saved light theme
-if (!localStorage.getItem('theme')) {
-    localStorage.setItem('theme', 'dark');
-    localStorage.setItem('Name', 'AppNet');
-    console.log('FORCE DARK MODE');
-}
-
-// Remove light theme class to ensure dark mode
-body.classList.remove('light-theme');
-
-// Check for saved theme preference
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'light') {
-    body.classList.add('light-theme');
-    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-} else {
-    // Dark mode (default)
-    body.classList.remove('light-theme');
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-}
-
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('light-theme');
-    // Update icon and save preference
-    if (body.classList.contains('light-theme')) {
+// Function to set theme
+function setTheme(theme) {
+    if (theme === 'light') {
+        document.documentElement.classList.add('light-theme');
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         localStorage.setItem('theme', 'light');
     } else {
+        document.documentElement.classList.remove('light-theme');
         themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
         localStorage.setItem('theme', 'dark');
     }
+}
+
+// Initial theme setup
+const savedTheme = localStorage.getItem('theme');
+
+// If no theme is saved, force dark mode as default
+if (!savedTheme) {
+    localStorage.setItem('Name', 'AppNet');
+    setTheme('dark');
+} else {
+    setTheme(savedTheme);
+}
+
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.classList.contains('light-theme') ? 'light' : 'dark';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
 });
 
 // ===================================
