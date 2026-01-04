@@ -252,7 +252,7 @@ contactForm.addEventListener('submit', async (e) => {
         // Send email using EmailJS sendForm
         // This takes the form element directy and uses the 'name' attributes:
         // 'name', 'email', 'subject', 'message'
-        await emailjs.sendForm('service_esaydkt', 'template_bjsvnxr', '#contact-form');
+        await emailjs.sendForm('service_icsyxqs', 'template_k1emtar', '#contact-form');
 
         // Show success message
         submitBtn.innerHTML = '<span>Message envoyé!</span><i class="fas fa-check"></i>';
