@@ -69,7 +69,7 @@ const body = document.body;
 // FORCE DARK MODE - Clear any saved light theme
 if (!localStorage.getItem('theme')) {
     localStorage.setItem('theme', 'dark');
-    localStorage.setItem('Name', 'Oussama Naya');
+    localStorage.setItem('Name', 'AppNet');
     console.log('FORCE DARK MODE');
 }
 
