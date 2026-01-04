@@ -100,6 +100,413 @@ themeToggle.addEventListener('click', () => {
 });
 
 // ===================================
+// Language Toggle (French/English)
+// ===================================
+const langToggle = document.getElementById('lang-toggle');
+let currentLang = localStorage.getItem('language') || 'fr';
+
+// Initialize language on page load
+function initLanguage() {
+    changeLanguage(currentLang);
+    updateLangToggle(currentLang);
+}
+
+// Update language toggle button
+function updateLangToggle(lang) {
+    langToggle.querySelector('span').textContent = lang.toUpperCase();
+}
+
+// Change language function
+function changeLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    localStorage.setItem('language', lang);
+
+    // Update all elements with data-i18n attributes
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const keys = key.split('.');
+        let value = translations[lang];
+
+        // Navigate through nested translation object
+        for (const k of keys) {
+            value = value[k];
+        }
+
+        if (value) {
+            element.textContent = value;
+        }
+    });
+
+    // Update specific sections that need special handling
+    updateServicesSection(lang);
+    updateWhyChooseSection(lang);
+    updateProcessSection(lang);
+    updatePricingSection(lang);
+    updateProjectsSection(lang);
+    updateAboutSection(lang);
+    updateTestimonialsSection(lang);
+    updateContactSection(lang);
+    updateFooterSection(lang);
+    updateNotificationMessages(lang);
+}
+
+// Update Services Section
+function updateServicesSection(lang) {
+    const t = translations[lang].services;
+
+    // Update skills in marquee
+    const skillTags = document.querySelectorAll('.services-marquee .skill-tag');
+    const skillsArray = [
+        t.skills.landingPages,
+        t.skills.siteVitrines,
+        t.skills.applicationsWeb,
+        t.skills.ecommerce,
+        t.skills.dashboards,
+        t.skills.seo,
+        t.skills.uxUiDesign,
+        t.skills.maintenance
+    ];
+
+    skillTags.forEach((tag, index) => {
+        if (index < skillsArray.length) {
+            tag.textContent = skillsArray[index % skillsArray.length];
+        }
+    });
+
+    // Update service cards
+    const serviceCards = document.querySelectorAll('.skill-card');
+    const cardsData = [t.cards.landing, t.cards.vitrine, t.cards.platform];
+
+    serviceCards.forEach((card, index) => {
+        if (cardsData[index]) {
+            const h3 = card.querySelector('h3');
+            const p = card.querySelector('p');
+            const spans = card.querySelectorAll('.skill-list span');
+
+            if (h3) h3.textContent = cardsData[index].title;
+            if (p) p.textContent = cardsData[index].description;
+            if (spans[0]) spans[0].textContent = cardsData[index].tag1;
+            if (spans[1]) spans[1].textContent = cardsData[index].tag2;
+            if (spans[2]) spans[2].textContent = cardsData[index].tag3;
+        }
+    });
+}
+
+// Update Why Choose Section
+function updateWhyChooseSection(lang) {
+    const t = translations[lang].whyChoose;
+    const section = document.querySelector('.why-choose');
+    if (!section) return;
+
+    section.querySelector('.section-title').textContent = t.title;
+    section.querySelector('.section-subtitle').textContent = t.subtitle;
+
+    const items = section.querySelectorAll('.why-item');
+    const itemsData = [
+        t.items.customSolutions,
+        t.items.cleanCode,
+        t.items.responsive,
+        t.items.fastDelivery,
+        t.items.directCommunication
+    ];
+
+    items.forEach((item, index) => {
+        if (itemsData[index]) {
+            const h3 = item.querySelector('h3');
+            const p = item.querySelector('p');
+            if (h3) h3.textContent = itemsData[index].title;
+            if (p) p.textContent = itemsData[index].description;
+        }
+    });
+}
+
+// Update Process Section
+function updateProcessSection(lang) {
+    const t = translations[lang].process;
+    const section = document.querySelector('.process');
+    if (!section) return;
+
+    section.querySelector('.section-title').textContent = t.title;
+    section.querySelector('.section-subtitle').textContent = t.subtitle;
+
+    const steps = section.querySelectorAll('.step');
+    const stepsData = [t.steps.step1, t.steps.step2, t.steps.step3, t.steps.step4];
+
+    steps.forEach((step, index) => {
+        if (stepsData[index]) {
+            const h3 = step.querySelector('h3');
+            const p = step.querySelector('p');
+            if (h3) h3.textContent = stepsData[index].title;
+            if (p) p.textContent = stepsData[index].description;
+        }
+    });
+}
+
+// Update Pricing Section
+function updatePricingSection(lang) {
+    const t = translations[lang].pricing;
+    const section = document.querySelector('.pricing');
+    if (!section) return;
+
+    section.querySelector('.section-title').textContent = t.title;
+    section.querySelector('.section-subtitle').textContent = t.subtitle;
+
+    // Update popular badge
+    const popularBadge = section.querySelector('.popular-badge');
+    if (popularBadge) popularBadge.textContent = t.popularBadge;
+
+    // Update pricing cards
+    const pricingCards = section.querySelectorAll('.pricing-card');
+    const packagesData = [t.packages.landing, t.packages.vitrine, t.packages.platform];
+
+    pricingCards.forEach((card, index) => {
+        if (packagesData[index]) {
+            const h3 = card.querySelector('h3');
+            const description = card.querySelector('.pricing-description');
+            const priceAmount = card.querySelector('.price-amount');
+            const features = card.querySelectorAll('.pricing-features li');
+            const btn = card.querySelector('.btn');
+
+            if (h3) h3.textContent = packagesData[index].title;
+            if (description) description.textContent = packagesData[index].description;
+
+            // Update price text
+            if (priceAmount && index < 2) {
+                const amount = priceAmount.textContent.match(/\d+/);
+                if (amount) {
+                    priceAmount.textContent = `${t.startingFrom} ${amount[0]}`;
+                }
+            } else if (priceAmount && index === 2) {
+                priceAmount.textContent = t.onQuote;
+            }
+
+            // Update features
+            features.forEach((feature, fIndex) => {
+                if (packagesData[index].features[fIndex]) {
+                    const icon = feature.querySelector('i');
+                    feature.textContent = packagesData[index].features[fIndex];
+                    if (icon) feature.prepend(icon);
+                }
+            });
+
+            // Update button text
+            if (btn && index < 2) {
+                btn.textContent = t.ctaStart;
+            } else if (btn && index === 2) {
+                btn.textContent = t.ctaContact;
+            }
+        }
+    });
+
+    // Update pricing info
+    const pricingInfo = section.querySelector('.pricing-info p');
+    if (pricingInfo) {
+        const icon = pricingInfo.querySelector('i');
+        pricingInfo.textContent = t.info;
+        if (icon) pricingInfo.prepend(icon);
+    }
+}
+
+// Update Projects Section
+function updateProjectsSection(lang) {
+    const t = translations[lang].projects;
+    const section = document.querySelector('.projects');
+    if (!section) return;
+
+    section.querySelector('.section-title').textContent = t.title;
+    section.querySelector('.section-subtitle').textContent = t.subtitle;
+
+    // Update filter buttons
+    const filterBtns = section.querySelectorAll('.filter-btn');
+    const filterTexts = [t.filters.all, t.filters.landing, t.filters.business, t.filters.platform];
+    filterBtns.forEach((btn, index) => {
+        if (filterTexts[index]) {
+            btn.textContent = filterTexts[index];
+        }
+    });
+
+    // Update project info labels
+    const projectItems = section.querySelectorAll('.pro-item strong');
+    projectItems.forEach(item => {
+        const text = item.textContent.trim();
+        if (text.includes('Objectif') || text.includes('Objective')) {
+            item.textContent = t.labels.objective;
+        } else if (text.includes('Solution')) {
+            item.textContent = t.labels.solution;
+        } else if (text.includes('Résultat') || text.includes('Result')) {
+            item.textContent = t.labels.result;
+        }
+    });
+}
+
+// Update About Section
+function updateAboutSection(lang) {
+    const t = translations[lang].about;
+    const section = document.querySelector('.about');
+    if (!section) return;
+
+    section.querySelector('.section-title').textContent = t.title;
+
+    const aboutText = section.querySelector('.about-text');
+    if (aboutText) {
+        const h3 = aboutText.querySelector('h3');
+        const paragraphs = aboutText.querySelectorAll('p');
+
+        if (h3) h3.textContent = t.subtitle;
+        if (paragraphs[0]) {
+            paragraphs[0].innerHTML = t.paragraph1.replace(
+                'transformer vos idées en réalités numériques performantes',
+                '<strong>' + (lang === 'fr' ? 'transformer vos idées en réalités numériques performantes' : 'transforming your ideas into high-performing digital realities') + '</strong>'
+            );
+        }
+        if (paragraphs[1]) {
+            paragraphs[1].innerHTML = t.paragraph2.replace(
+                /Design, Développement Full Stack et Data Science|Design, Full Stack Development, and Data Science/,
+                '<strong>' + (lang === 'fr' ? 'Design, Développement Full Stack et Data Science' : 'Design, Full Stack Development, and Data Science') + '</strong>'
+            );
+        }
+        if (paragraphs[2]) {
+            paragraphs[2].innerHTML = t.paragraph3.replace(
+                /équipe dédiée|dedicated team/,
+                '<strong>' + (lang === 'fr' ? 'équipe dédiée' : 'dedicated team') + '</strong>'
+            );
+        }
+    }
+
+    // Update stats labels
+    const statLabels = section.querySelectorAll('.stat-label');
+    if (statLabels[0]) statLabels[0].textContent = t.stats.experts;
+    if (statLabels[1]) statLabels[1].textContent = t.stats.support;
+    if (statLabels[2]) statLabels[2].textContent = t.stats.power;
+
+    const teamSpan = section.querySelector('.stat-number-span');
+    if (teamSpan && teamSpan.textContent === 'Team') {
+        teamSpan.textContent = t.stats.team;
+    }
+}
+
+// Update Testimonials Section
+function updateTestimonialsSection(lang) {
+    const t = translations[lang].testimonials;
+    const section = document.querySelector('.testimonials');
+    if (!section) return;
+
+    section.querySelector('.section-title').textContent = t.title;
+    section.querySelector('.section-subtitle').textContent = t.subtitle;
+}
+
+// Update Contact Section
+function updateContactSection(lang) {
+    const t = translations[lang].contact;
+    const section = document.querySelector('.contact');
+    if (!section) return;
+
+    section.querySelector('.section-title').textContent = t.title;
+    section.querySelector('.section-subtitle').textContent = t.subtitle;
+
+    // Update contact info
+    const contactItems = section.querySelectorAll('.contact-item h4');
+    if (contactItems[0]) contactItems[0].textContent = t.info.email;
+    if (contactItems[1]) contactItems[1].textContent = t.info.whatsapp;
+    if (contactItems[2]) contactItems[2].textContent = t.info.location;
+
+    const locationText = section.querySelector('.contact-item p');
+    if (locationText) locationText.textContent = t.info.locationText;
+
+    // Update form
+    const form = section.querySelector('.contact-form');
+    if (form) {
+        const labels = form.querySelectorAll('label');
+        if (labels[0]) labels[0].textContent = t.form.nameLabel;
+        if (labels[1]) labels[1].textContent = t.form.emailLabel;
+        if (labels[2]) labels[2].textContent = t.form.projectLabel;
+        if (labels[3]) labels[3].textContent = t.form.messageLabel;
+
+        const nameInput = form.querySelector('#name');
+        const emailInput = form.querySelector('#email');
+        const messageInput = form.querySelector('#message');
+
+        if (nameInput) nameInput.placeholder = t.form.namePlaceholder;
+        if (emailInput) emailInput.placeholder = t.form.emailPlaceholder;
+        if (messageInput) messageInput.placeholder = t.form.messagePlaceholder;
+
+        // Update select options
+        const select = form.querySelector('#subject');
+        if (select) {
+            const options = select.querySelectorAll('option');
+            if (options[0]) options[0].textContent = t.form.projectPlaceholder;
+            if (options[1]) options[1].textContent = t.form.projectOptions.landing;
+            if (options[2]) options[2].textContent = t.form.projectOptions.vitrine;
+            if (options[3]) options[3].textContent = t.form.projectOptions.platform;
+            if (options[4]) options[4].textContent = t.form.projectOptions.other;
+        }
+
+        const submitBtn = form.querySelector('button[type="submit"] span');
+        if (submitBtn && !submitBtn.textContent.includes('...')) {
+            submitBtn.textContent = t.form.submitButton;
+        }
+    }
+}
+
+// Update Footer Section
+function updateFooterSection(lang) {
+    const footer = document.querySelector('.footer');
+    if (!footer) return;
+
+    const t = translations[lang];
+
+    // Update footer tagline
+    const footerP = footer.querySelector('.footer-logo p');
+    if (footerP) {
+        footerP.textContent = lang === 'fr'
+            ? 'Propulsez votre entreprise avec des solutions web modernes.'
+            : 'Boost your business with modern web solutions.';
+    }
+
+    // Update footer links
+    const footerLinks = footer.querySelectorAll('.footer-links a');
+    const linkTexts = [
+        t.nav.home,
+        t.nav.services,
+        t.nav.pricing,
+        lang === 'fr' ? 'Réalisations' : 'Work',
+        t.nav.about,
+        t.nav.contact
+    ];
+
+    footerLinks.forEach((link, index) => {
+        if (linkTexts[index]) {
+            link.textContent = linkTexts[index];
+        }
+    });
+
+    // Update copyright
+    const copyright = footer.querySelector('.footer-bottom p');
+    if (copyright) {
+        copyright.textContent = lang === 'fr'
+            ? '© 2026 AppNet. Tous droits réservés.'
+            : '© 2026 AppNet. All rights reserved.';
+    }
+}
+
+// Store notification messages for later use
+function updateNotificationMessages(lang) {
+    window.currentNotificationMessages = translations[lang].contact.notifications;
+    window.currentFormMessages = translations[lang].contact.form;
+}
+
+// Language toggle event listener
+langToggle.addEventListener('click', () => {
+    const newLang = currentLang === 'fr' ? 'en' : 'fr';
+    changeLanguage(newLang);
+    updateLangToggle(newLang);
+});
+
+// Initialize language on page load
+initLanguage();
+
+// ===================================
 // Smooth Scroll
 // ===================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -245,7 +652,7 @@ contactForm.addEventListener('submit', async (e) => {
     const originalText = submitBtn.innerHTML;
 
     // Show loading state
-    submitBtn.innerHTML = '<span>Envoi en cours...</span><i class="fas fa-spinner fa-spin"></i>';
+    submitBtn.innerHTML = `<span>${window.currentFormMessages?.sending || 'Envoi en cours...'}</span><i class="fas fa-spinner fa-spin"></i>`;
     submitBtn.disabled = true;
 
     try {
@@ -255,24 +662,24 @@ contactForm.addEventListener('submit', async (e) => {
         await emailjs.sendForm('service_icsyxqs', 'template_k1emtar', '#contact-form');
 
         // Show success message
-        submitBtn.innerHTML = '<span>Message envoyé!</span><i class="fas fa-check"></i>';
+        submitBtn.innerHTML = `<span>${window.currentFormMessages?.sent || 'Message envoyé!'}</span><i class="fas fa-check"></i>`;
         submitBtn.style.background = 'linear-gradient(135deg, #00ff88 0%, #00d9ff 100%)';
 
         // Reset form
         contactForm.reset();
 
         // Show success notification
-        showNotification('Merci! Votre message a été envoyé avec succès.', 'success');
+        showNotification(window.currentNotificationMessages?.success || 'Merci! Votre message a été envoyé avec succès.', 'success');
 
     } catch (error) {
         console.error('EmailJS Error:', error);
 
         // Show error message on button
-        submitBtn.innerHTML = '<span>Erreur!</span><i class="fas fa-exclamation-triangle"></i>';
+        submitBtn.innerHTML = `<span>${window.currentFormMessages?.error || 'Erreur!'}</span><i class="fas fa-exclamation-triangle"></i>`;
         submitBtn.style.background = '#ff4444';
 
         // Show error notification
-        showNotification('Une erreur est survenue lors de l\'envoi. Veuillez réessayer plus tard.', 'error');
+        showNotification(window.currentNotificationMessages?.error || 'Une erreur est survenue lors de l\'envoi. Veuillez réessayer plus tard.', 'error');
     } finally {
         // Reset button after 3 seconds
         setTimeout(() => {

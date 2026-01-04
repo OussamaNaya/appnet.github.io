@@ -34,14 +34,17 @@
         <div class="nav-container">
             <a href="#home" class="nav-logo">AppNet</a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Accueil</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#process" class="nav-link">Processus</a></li>
-                <li><a href="#pricing" class="nav-link">Tarifs</a></li>
-                <li><a href="#projects" class="nav-link">Projets</a></li>
-                <li><a href="#about" class="nav-link">À Propos</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+                <li><a href="#process" class="nav-link" data-i18n="nav.process">Processus</a></li>
+                <li><a href="#pricing" class="nav-link" data-i18n="nav.pricing">Tarifs</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">À Propos</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
+            <div class="lang-toggle" id="lang-toggle">
+                <span>FR</span>
+            </div>
             <div class="theme-toggle" id="theme-toggle">
                 <i class="fas fa-moon"></i>
             </div>
@@ -58,23 +61,24 @@
         <div class="hero-background"></div>
         <div class="hero-content">
             <div class="hero-text">
-                <div class="hero-badge">Expert en Solutions Web</div>
+                <div class="hero-badge" data-i18n="hero.badge">Expert en Solutions Web</div>
                 <h1 class="hero-title">
-                    <span class="greeting">Bienvenue chez</span>
-                    <span class="name">AppNet</span>
+                    <span class="greeting" data-i18n="hero.greeting">Bienvenue chez</span>
+                    <span class="name" data-i18n="hero.name">AppNet</span>
                 </h1>
-                <p class="hero-subtitle">Propulsez votre entreprise avec des solutions web modernes</p>
-                <p class="hero-description">
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Propulsez votre entreprise avec des solutions web
+                    modernes</p>
+                <p class="hero-description" data-i18n="hero.description">
                     Nous aidons les entreprises à se développer grâce à des sites vitrines, des landing pages haute
                     conversion et des plateformes web sur mesure.
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">
-                        <span>Obtenir un devis</span>
+                        <span data-i18n="hero.ctaQuote">Obtenir un devis</span>
                         <i class="fas fa-file-invoice-dollar"></i>
                     </a>
                     <a href="https://wa.me/212609385666" target="_blank" class="btn btn-secondary">
-                        <span>WhatsApp</span>
+                        <span data-i18n="hero.ctaWhatsapp">WhatsApp</span>
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -93,7 +97,7 @@
             </div>
         </div>
         <div class="scroll-indicator">
-            <span>Scroll</span>
+            <span data-i18n="hero.scrollText">Scroll</span>
             <div class="scroll-line"></div>
         </div>
     </section>
@@ -101,8 +105,9 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">Nos Services</h2>
-            <p class="section-subtitle">Des solutions web sur mesure pour accélérer votre croissance</p>
+            <h2 class="section-title" data-i18n="services.title">Nos Services</h2>
+            <p class="section-subtitle" data-i18n="services.subtitle">Des solutions web sur mesure pour accélérer votre
+                croissance</p>
 
             <div class="services-marquee">
                 <div class="marquee-content">
@@ -840,11 +845,6 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 AppNet. Tous droits réservés.</p>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-tiktok"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
             </div>
         </div>
     </footer>
@@ -853,6 +853,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- Scripts -->
+    <script src="scripts/translations.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 

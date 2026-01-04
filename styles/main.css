@@ -228,6 +228,36 @@ a {
     transform: rotate(15deg);
 }
 
+/* Language Toggle */
+.lang-toggle {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-full);
+    backdrop-filter: blur(10px);
+    transition: var(--transition-normal);
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+}
+
+.lang-toggle:hover {
+    background: var(--accent-gradient);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.lang-toggle span {
+    letter-spacing: 0.5px;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
