@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AppNet - Agence digitale spécialisée en solutions web modernes, sites vitrines et plateformes sur mesure.">
+    <meta name="keywords"
+        content="Agence Digitale, AppNet, Solutions Web, Landing Pages, Sites Vitrines, Applications Web, E-commerce">
+    <meta name="author" content="AppNet">
+    <title>AppNet | Agence de Solutions Web Modernes</title>
+    <link rel="icon" type="image/png" href="assets/favicon.jpeg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">AppNet</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+                <li><a href="#services" class="nav-link" data-i18n="nav.services">Services</a></li>
+                <li><a href="#process" class="nav-link" data-i18n="nav.process">Processus</a></li>
+                <li><a href="#pricing" class="nav-link" data-i18n="nav.pricing">Tarifs</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">À Propos</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+            </ul>
+            <div class="lang-toggle" id="lang-toggle">
+                <span>FR</span>
+            </div>
+            <div class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge" data-i18n="hero.badge">Expert en Solutions Web</div>
+                <h1 class="hero-title">
+                    <span class="greeting" data-i18n="hero.greeting">Bienvenue chez</span>
+                    <span class="name" data-i18n="hero.name">AppNet</span>
+                </h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Propulsez votre entreprise avec des solutions web
+                    modernes</p>
+                <p class="hero-description" data-i18n="hero.description">
+                    Nous aidons les entreprises à se développer grâce à des sites vitrines, des landing pages haute
+                    conversion et des plateformes web sur mesure.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span data-i18n="hero.ctaQuote">Obtenir un devis</span>
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </a>
+                    <a href="https://wa.me/212609385666" target="_blank" class="btn btn-secondary">
+                        <span data-i18n="hero.ctaWhatsapp">WhatsApp</span>
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="mailto:contact@appnet.ma" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img src="assets/hero-illustration.png" alt="AppNet Digital Solutions" class="floating-image">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span data-i18n="hero.scrollText">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services.title">Nos Services</h2>
+            <p class="section-subtitle" data-i18n="services.subtitle">Des solutions web sur mesure pour accélérer votre
+                croissance</p>
+
+            <div class="services-marquee">
+                <div class="marquee-content">
+                    <span class="skill-tag">Landing Pages</span>
+                    <span class="skill-tag">Sites Vitrines</span>
+                    <span class="skill-tag">Applications Web</span>
+                    <span class="skill-tag">E-commerce</span>
+                    <span class="skill-tag">Dashboards</span>
+                    <span class="skill-tag">SEO</span>
+                    <span class="skill-tag">UX/UI Design</span>
+                    <span class="skill-tag">Maintenance</span>
+                    <!-- Duplicate for infinite scroll if needed by JS -->
+                    <span class="skill-tag">Landing Pages</span>
+                    <span class="skill-tag">Sites Vitrines</span>
+                    <span class="skill-tag">Applications Web</span>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Landing Pages</h3>
+                    <p>Pages uniques optimisées pour la conversion. Idéal pour vos campagnes publicitaires et lancements
+                        de produits.</p>
+                    <div class="skill-list">
+                        <span>Haute Conversion</span>
+                        <span>Responsive</span>
+                        <span>Ultra-Rapide</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Sites Vitrines</h3>
+                    <p>Présence en ligne professionnelle pour votre entreprise. Présentez vos services et renforcez
+                        votre crédibilité.</p>
+                    <div class="skill-list">
+                        <span>Multi-pages</span>
+                        <span>SEO optimisé</span>
+                        <span>Design Premium</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Plateformes Web</h3>
+                    <p>Solutions sur mesure : tableaux de bord, systèmes de gestion, et applications web complexes
+                        adaptées à vos besoins.</p>
+                    <div class="skill-list">
+                        <span>SaaS</span>
+                        <span>Dashboards</span>
+                        <span>Custom Logic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose AppNet Section -->
+    <section id="why-choose" class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Pourquoi Choisir AppNet ?</h2>
+            <p class="section-subtitle">Votre partenaire numérique de confiance pour des résultats concrets</p>
+
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="why-text">
+                        <h3>Solutions Sur Mesure</h3>
+                        <p>Chaque projet est unique. Nous créons des solutions adaptées spécifiquement à vos besoins
+                            business.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-code"></i></div>
+                    <div class="why-text">
+                        <h3>Code Propre & Performance</h3>
+                        <p>Des sites rapides, optimisés et construits avec les dernières technologies.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="why-text">
+                        <h3>Design Responsive</h3>
+                        <p>Votre site sera parfait sur tous les écrans : ordinateurs, tablettes et smartphones.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="why-text">
+                        <h3>Livraison Rapide</h3>
+                        <p>Nous respectons vos délais sans jamais faire de compromis sur la qualité du travail.</p>
+                    </div>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon"><i class="fas fa-comments"></i></div>
+                    <div class="why-text">
+                        <h3>Communication Directe</h3>
+                        <p>Une équipe experte et dédiée pour votre projet. Pas d'intermédiaires, une réactivité
+                            maximale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <h2 class="section-title">Notre Processus</h2>
+            <p class="section-subtitle">Une approche structurée pour garantir la réussite de votre projet</p>
+
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Analyse & Planning</h3>
+                        <p>Nous étudions vos besoins et définissons la meilleure stratégie pour votre projet.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Design & UX</h3>
+                        <p>Conception d'une interface moderne et intuitive axée sur l'expérience utilisateur.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Développement</h3>
+                        <p>Codage rigoureux de votre solution en utilisant les standards de performance actuels.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Tests & Livraison</h3>
+                        <p>Vérification finale et mise en ligne de votre site pour booster votre activité.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Nos Tarifs</h2>
+            <p class="section-subtitle">🎄 <strong>Offre de Lancement</strong> : Profitez de tarifs exceptionnels pour
+                propulser votre business !</p>
+
+            <div class="pricing-grid">
+                <!-- Package 1: Landing Page -->
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Landing Page</h3>
+                    <p class="pricing-description">Page unique optimisée pour la conversion</p>
+                    <div class="pricing-price">
+                        <span class="price-original"
+                            style="text-decoration: line-through; opacity: 0.5; font-size: 1.2rem; margin-right: 10px;">3000
+                            DH</span>
+                        <span class="price-amount">1500</span>
+                        <span class="price-currency">DH</span>
+                        <div class="price-badge"
+                            style="background: var(--accent-gradient); color: black; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; display: inline-block; margin-top: 5px; font-weight: 800;">
+                            LANCEMENT -50%</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Design moderne et responsive</li>
+                        <li><i class="fas fa-check"></i> Optimisation SEO de base</li>
+                        <li><i class="fas fa-check"></i> Formulaire de contact</li>
+                        <li><i class="fas fa-check"></i> Intégration WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Performance ultra-rapide</li>
+                        <li><i class="fas fa-check"></i> 1 mois de support gratuit</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Commencer</a>
+                </div>
+
+                <!-- Package 2: Site Vitrine (Popular) -->
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Populaire</div>
+                    <div class="pricing-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Site Vitrine</h3>
+                    <p class="pricing-description">Présence en ligne complète et professionnelle</p>
+                    <div class="pricing-price">
+                        <span class="price-original"
+                            style="text-decoration: line-through; opacity: 0.5; font-size: 1.2rem; margin-right: 10px;">6000
+                            DH</span>
+                        <span class="price-amount">3500</span>
+                        <span class="price-currency">DH</span>
+                        <div class="price-badge"
+                            style="background: var(--accent-gradient); color: black; font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; display: inline-block; margin-top: 5px; font-weight: 800;">
+                            LANCEMENT -40%</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Tout du package Landing Page</li>
+                        <li><i class="fas fa-check"></i> Multi-pages (5-10 pages)</li>
+                        <li><i class="fas fa-check"></i> Design premium personnalisé</li>
+                        <li><i class="fas fa-check"></i> SEO avancé</li>
+                        <li><i class="fas fa-check"></i> Blog intégré</li>
+                        <li><i class="fas fa-check"></i> Animations modernes</li>
+                        <li><i class="fas fa-check"></i> 3 mois de support gratuit</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Commencer</a>
+                </div>
+
+                <!-- Package 3: Plateforme Web -->
+                <div class="pricing-card">
+                    <div class="pricing-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Plateforme Web</h3>
+                    <p class="pricing-description">Solution sur mesure complexe et scalable</p>
+                    <div class="pricing-price">
+                        <span class="price-amount">À partir de 8000</span>
+                        <span class="price-currency">DH</span>
+                        <div class="price-badge"
+                            style="border: 1px solid var(--accent-primary); color: var(--accent-primary); font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; display: inline-block; margin-top: 5px; font-weight: 800;">
+                            PAIEMENT FLEXIBLE</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Tout du package Site Vitrine</li>
+                        <li><i class="fas fa-check"></i> Application web complète</li>
+                        <li><i class="fas fa-check"></i> Dashboard administrateur</li>
+                        <li><i class="fas fa-check"></i> Base de données</li>
+                        <li><i class="fas fa-check"></i> API personnalisées</li>
+                        <li><i class="fas fa-check"></i> Authentification utilisateur</li>
+                        <li><i class="fas fa-check"></i> Paiements en ligne</li>
+                        <li><i class="fas fa-check"></i> Support prioritaire 6 mois</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Nous Contacter</a>
+                </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="pricing-info">
+                <p><i class="fas fa-info-circle"></i> Tous nos packages incluent l'hébergement pour 1 an et la
+                    maintenance technique de base.</p>
+                <p><i class="fas fa-credit-card"></i> <strong>Paiement en 2 fois possible</strong> pour faciliter votre
+                    investissement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Nos Réalisations</h2>
+            <p class="section-subtitle">Découvrez comment nous avons aidé nos clients à réussir en ligne</p>
+
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">Tout</button>
+                <button class="filter-btn" data-filter="landing">Landing Pages</button>
+                <button class="filter-btn" data-filter="business">Sites Vitrines</button>
+                <button class="filter-btn" data-filter="platform">Plateformes Web</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Restaurant -->
+                <div class="project-card" data-category="landing">
+                    <div class="project-image">
+                        <img src="assets/Restaurant moderne.jfif" alt="Landing Page Restaurant Moderne">
+                    </div>
+                    <div class="project-content">
+                        <h3>Landing Page – Restaurant moderne</h3>
+                        <p>Landing page conçue pour augmenter les réservations et faciliter le contact client via
+                            WhatsApp.</p>
+                        <div class="project-pro-info">
+                            <div class="pro-item"><i class="fas fa-bullseye"></i> <span><strong>Objectif :</strong>
+                                    Augmenter les réservations</span></div>
+                            <div class="pro-item"><i class="fas fa-tools"></i> <span><strong>Solution :</strong> Vitesse
+                                    & Contact WhatsApp</span></div>
+                            <div class="pro-item"><i class="fas fa-chart-line"></i> <span><strong>Résultat :</strong>
+                                    +40% de demandes</span></div>
+                        </div>
+                        <div class="project-tags">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>WhatsApp API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Business -->
+                <div class="project-card" data-category="business">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
+                            alt="Site Vitrine Société de Services">
+                    </div>
+                    <div class="project-content">
+                        <h3>Site vitrine – Société de services</h3>
+                        <p>Site vitrine professionnel mettant en valeur les services, l'expertise et renforçant la
+                            crédibilité.</p>
+                        <div class="project-pro-info">
+                            <div class="pro-item"><i class="fas fa-bullseye"></i> <span><strong>Objectif :</strong>
+                                    Crédibilité & Leads</span></div>
+                            <div class="pro-item"><i class="fas fa-tools"></i> <span><strong>Solution :</strong> Design
+                                    Premium & SEO</span></div>
+                            <div class="pro-item"><i class="fas fa-chart-line"></i> <span><strong>Résultat :</strong>
+                                    Expérience pro renforcée</span></div>
+                        </div>
+                        <div class="project-tags">
+                            <span>UI/UX</span>
+                            <span>SEO</span>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Platform -->
+                <div class="project-card" data-category="platform">
+                    <div class="project-image">
+                        <img src="assets/gestion de réservations.jfif" alt="Plateforme Web Gestion Réservations">
+                    </div>
+                    <div class="project-content">
+                        <h3>Plateforme web – Gestion de réservations</h3>
+                        <p>Plateforme permettant la gestion des réservations, utilisateurs et statistiques via un
+                            dashboard.</p>
+                        <div class="project-pro-info">
+                            <div class="pro-item"><i class="fas fa-bullseye"></i> <span><strong>Objectif :</strong>
+                                    Automatisation</span></div>
+                            <div class="pro-item"><i class="fas fa-tools"></i> <span><strong>Solution :</strong>
+                                    Dashboard Admin & Cloud</span></div>
+                            <div class="pro-item"><i class="fas fa-chart-line"></i> <span><strong>Résultat :</strong>
+                                    Gain de temps opérationnel</span></div>
+                        </div>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Order Confirmation Landing -->
+                <div class="project-card" data-category="landing">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800"
+                            alt="Landing Page Confirmation de Commandes">
+                    </div>
+                    <div class="project-content">
+                        <h3>Landing Page – Confirmation de Commandes</h3>
+                        <p>Page post-achat optimisée pour rassurer le client et maximiser la fidélisation après la
+                            commande.</p>
+                        <div class="project-pro-info">
+                            <div class="pro-item"><i class="fas fa-bullseye"></i> <span><strong>Objectif :</strong>
+                                    Rassurance & Fidélisation</span></div>
+                            <div class="pro-item"><i class="fas fa-tools"></i> <span><strong>Solution :</strong> UX
+                                    épurée & Cross-selling</span></div>
+                            <div class="pro-item"><i class="fas fa-chart-line"></i> <span><strong>Résultat :</strong>
+                                    Hausse du taux de réachat</span></div>
+                        </div>
+                        <div class="project-tags">
+                            <span>E-commerce</span>
+                            <span>UX Design</span>
+                            <span>Conversion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Pharmacy Management -->
+                <div class="project-card" data-category="platform">
+                    <div class="project-image">
+                        <img src="assets/Gestion de Pharmacie.jfif" alt="Gestion de Pharmacie">
+                    </div>
+                    <div class="project-content">
+                        <h3>Gestion de Pharmacie – Dashboard</h3>
+                        <p>Plateforme cloud de gestion complète : stocks, ventes et ordonnances sécurisées.</p>
+                        <div class="project-pro-info">
+                            <div class="pro-item"><i class="fas fa-bullseye"></i> <span><strong>Objectif :</strong>
+                                    Optimisation des stocks</span></div>
+                            <div class="pro-item"><i class="fas fa-tools"></i> <span><strong>Solution :</strong> Django
+                                    & Angular Enterprise</span></div>
+                            <div class="pro-item"><i class="fas fa-chart-line"></i> <span><strong>Résultat :</strong>
+                                    Traçabilité totale 24/7</span></div>
+                        </div>
+                        <div class="project-tags">
+                            <span>Django</span>
+                            <span>Angular</span>
+                            <span>Docker/AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: E-commerce Clothing -->
+                <div class="project-card" data-category="platform">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800"
+                            alt="E-commerce Vêtements">
+                    </div>
+                    <div class="project-content">
+                        <h3>E-commerce – Mode & Vêtements</h3>
+                        <p>Boutique en ligne moderne avec gestion des paniers, paiements sécurisés et suivi de
+                            commandes.</p>
+                        <div class="project-pro-info">
+                            <div class="pro-item"><i class="fas fa-bullseye"></i> <span><strong>Objectif :</strong>
+                                    Expansion des ventes</span></div>
+                            <div class="pro-item"><i class="fas fa-tools"></i> <span><strong>Solution :</strong> Node.js
+                                    & Sécurité JWT</span></div>
+                            <div class="pro-item"><i class="fas fa-chart-line"></i> <span><strong>Résultat :</strong>
+                                    Boutique scalable cloud</span></div>
+                        </div>
+                        <div class="project-tags">
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>EJS/Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Support Courses -->
+                <div class="project-card" data-category="platform">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=800"
+                            alt="Plateforme Cours de Soutien">
+                    </div>
+                    <div class="project-content">
+                        <h3>Plateforme – Cours de Soutien Scolaire</h3>
+                        <p>Système de gestion pédagogique facilitant le suivi des élèves et la gestion des cours en
+                            ligne.</p>
+                        <div class="project-pro-info">
+                            <div class="pro-item"><i class="fas fa-bullseye"></i> <span><strong>Objectif :</strong>
+                                    Digitalisation du suivi</span></div>
+                            <div class="pro-item"><i class="fas fa-tools"></i> <span><strong>Solution :</strong> JEE &
+                                    Architecture Robuste</span></div>
+                            <div class="pro-item"><i class="fas fa-chart-line"></i> <span><strong>Résultat :</strong>
+                                    Flux pédagogique fluidifié</span></div>
+                        </div>
+                        <div class="project-tags">
+                            <span>JEE</span>
+                            <span>MySQL</span>
+                            <span>Digital Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Project 8: Yoga Studio -->
+                <div class="project-card" data-category="business">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800"
+                            alt="Site Salle de Yoga">
+                    </div>
+                    <div class="project-content">
+                        <h3>Site Vitrine – Studio de Yoga</h3>
+                        <p>Présence digitale apaisante et professionnelle pour un centre de bien-être et yoga.</p>
+                        <div class="project-pro-info">
+                            <div class="pro-item"><i class="fas fa-bullseye"></i> <span><strong>Objectif :</strong>
+                                    Hausse des inscriptions</span></div>
+                            <div class="pro-item"><i class="fas fa-tools"></i> <span><strong>Solution :</strong> Design
+                                    Zen & Responsive</span></div>
+                            <div class="pro-item"><i class="fas fa-chart-line"></i> <span><strong>Résultat :</strong>
+                                    Meilleure visibilité locale</span></div>
+                        </div>
+                        <div class="project-tags">
+                            <span>Branding</span>
+                            <span>SEO</span>
+                            <span>Well-being</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: Building Tech Solutions -->
+                <div class="project-card" data-category="business">
+                    <div class="project-image">
+                        <img src="assets/Solutions Bâtiment.jpg" alt="Solutions Techniques Bâtiment">
+                    </div>
+                    <div class="project-content">
+                        <h3>Site Vitrine – Solutions Bâtiment</h3>
+                        <p>Site institutionnel pour un expert en solutions techniques et ingénierie du bâtiment.</p>
+                        <div class="project-pro-info">
+                            <div class="pro-item"><i class="fas fa-bullseye"></i> <span><strong>Objectif :</strong>
+                                    Valoriser l'expertise</span></div>
+                            <div class="pro-item"><i class="fas fa-tools"></i> <span><strong>Solution :</strong>
+                                    Architecture de contenu pro</span></div>
+                            <div class="pro-item"><i class="fas fa-chart-line"></i> <span><strong>Résultat :</strong>
+                                    Image de marque leader</span></div>
+                        </div>
+                        <div class="project-tags">
+                            <span>Engineering</span>
+                            <span>Portfolio B2B</span>
+                            <span>SEO pro</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 10: Sports Coach Landing -->
+                <div class="project-card" data-category="landing">
+                    <div class="project-image">
+                        <img src="assets/Coach de Sport.jfif" alt="Landing Page Coach de Sport">
+                    </div>
+                    <div class="project-content">
+                        <h3>Landing Page – Coach de Sport</h3>
+                        <p>Page optimisée pour l'acquisition de clients et la promotion de programmes d'entraînement
+                            personnalisés.</p>
+                        <div class="project-pro-info">
+                            <div class="pro-item"><i class="fas fa-bullseye"></i> <span><strong>Objectif :</strong>
+                                    Booster les inscriptions</span></div>
+                            <div class="pro-item"><i class="fas fa-tools"></i> <span><strong>Solution :</strong> Design
+                                    Motivateur & CTA Forts</span></div>
+                            <div class="pro-item"><i class="fas fa-chart-line"></i> <span><strong>Résultat :</strong>
+                                    +50% de prospects qualifiés</span></div>
+                        </div>
+                        <div class="project-tags">
+                            <span>Fitness</span>
+                            <span>Landing Page</span>
+                            <span>Conversion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">À Propos d'AppNet</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/Logo.jpeg" alt="AppNet Digital Agency">
+                    <div class="about-image-border"></div>
+                </div>
+                <div class="about-text">
+                    <h3>Une expertise collective au service de votre business</h3>
+                    <p>
+                        AppNet est une agence digitale regroupant une équipe de passionnés des technologies web avec une
+                        mission claire :
+                        <strong>transformer vos idées en réalités numériques performantes.</strong>
+                    </p>
+                    <p>
+                        Forts de nos expertises complémentaires en <strong>Design, Développement Full Stack et Data
+                            Science</strong>, nous allions
+                        rigueur technique et créativité pour concevoir des solutions qui ne sont pas seulement
+                        esthétiques, mais qui génèrent de réels résultats business.
+                    </p>
+                    <p>
+                        En choisissant AppNet, vous bénéficiez d'une <strong>équipe dédiée</strong>, d'une communication
+                        fluide
+                        et d'un engagement total sur la qualité et la performance de chaque projet que nous livrons.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">100</span><span class="stat-number-span">%</span>
+                            <span class="stat-label">Experts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24</span><span class="stat-number-span">/7</span>
+                            <span class="stat-label">Support</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number-span">Team</span>
+                            <span class="stat-label">Power</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Témoignages</h2>
+            <p class="section-subtitle">Ce que disent nos clients et partenaires</p>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="testimonial-text">
+                            "L'équipe d'AppNet a démontré une excellente maîtrise des technologies web modernes.
+                            Leur approche méthodique et leur capacité à livrer des solutions robustes dans les délais
+                            sont impressionnantes."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Mohamed Alami</h4>
+                            <p>Directeur Technique - EasySoft</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="testimonial-text">
+                            "Une agence talentueuse avec une forte expertise en solutions digitales.
+                            Les plateformes qu'ils ont développées pour nous ont considérablement amélioré notre
+                            efficacité
+                            sur le marché."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Bennani</h4>
+                            <p>Directrice Marketing - Groupe OMF</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="testimonial-text">
+                            "AppNet est le partenaire idéal pour toute entreprise cherchant à innover.
+                            Leur sens de l'écoute et leur professionnalisme font d'eux un choix incontournable
+                            au Maroc."
+                        </p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Yassine Karim</h4>
+                            <p>Fondateur - StartUp Innov</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-nav">
+                <button class="nav-btn prev-btn" id="prev-testimonial">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="testimonials-dots" id="testimonials-dots"></div>
+                <button class="nav-btn next-btn" id="next-testimonial">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Démarrons Votre Projet</h2>
+            <p class="section-subtitle">Parlons de vos besoins et voyons comment AppNet peut vous aider</p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Professionnel</h4>
+                            <a href="mailto:contact@appnet.ma">contact@appnet.ma</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/212609385666" target="_blank">+212 609-385666</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Localisation</h4>
+                            <p>Casablanca, Maroc (Disponible à l'international)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nom / Entreprise</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom ou nom d'entreprise" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Type de projet</label>
+                        <select id="subject" name="subject" required
+                            style="width: 100%; padding: 1rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--glass-border);">
+                            <option value="">Sélectionnez un service</option>
+                            <option value="Landing Page">Landing Page</option>
+                            <option value="Site Vitrine">Site Vitrine</option>
+                            <option value="Plateforme Web">Plateforme Web</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Décrivez brièvement votre projet..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <span>Envoyer le message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <a href="https://wa.me/212777672033" target="_blank" class="btn btn-secondary"
+                        style="margin-top: 1rem; width: 100%; justify-content: center;">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Discuter sur WhatsApp</span>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>AppNet</h3>
+                    <p>Propulsez votre entreprise avec des solutions web modernes.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Accueil</a>
+                    <a href="#services">Services</a>
+                    <a href="#pricing">Tarifs</a>
+                    <a href="#projects">Réalisations</a>
+                    <a href="#about">À Propos</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AppNet. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="scripts/translations.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
