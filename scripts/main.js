@@ -82,7 +82,7 @@ const savedTheme = localStorage.getItem('theme');
 
 // If no theme is saved, force dark mode as default
 if (!savedTheme) {
-    localStorage.setItem('Name', 'AppNet');
+    localStorage.setItem('Name', 'AppNets');
     setTheme('dark');
 } else {
     setTheme(savedTheme);
@@ -480,8 +480,8 @@ function updateFooterSection(lang) {
     const copyright = footer.querySelector('.footer-bottom p');
     if (copyright) {
         copyright.textContent = lang === 'fr'
-            ? '© 2026 AppNet. Tous droits réservés.'
-            : '© 2026 AppNet. All rights reserved.';
+            ? '© 2026 AppNets. Tous droits réservés.'
+            : '© 2026 AppNets. All rights reserved.';
     }
 }
 
