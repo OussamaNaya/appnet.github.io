@@ -19,7 +19,7 @@ const translations = {
         hero: {
             badge: 'Expert en Solutions Web',
             greeting: 'Bienvenue chez',
-            name: 'AppNet',
+            name: 'appNets',
             subtitle: 'Propulsez votre entreprise avec des solutions web modernes',
             description: 'Nous aidons les entreprises à se développer grâce à des sites vitrines, des landing pages haute conversion et des plateformes web sur mesure.',
             ctaQuote: 'Obtenir un devis',
@@ -68,7 +68,7 @@ const translations = {
 
         // Why Choose Section
         whyChoose: {
-            title: 'Pourquoi Choisir AppNet ?',
+            title: 'Pourquoi Choisir appNets ?',
             subtitle: 'Votre partenaire numérique de confiance pour des résultats concrets',
             items: {
                 customSolutions: {
@@ -190,11 +190,11 @@ const translations = {
 
         // About Section
         about: {
-            title: 'À Propos d\'AppNet',
+            title: 'À Propos d\'appNets',
             subtitle: 'Une expertise collective au service de votre business',
-            paragraph1: 'AppNet est une agence digitale regroupant une équipe de passionnés des technologies web avec une mission claire : transformer vos idées en réalités numériques performantes.',
+            paragraph1: 'appNets est une agence digitale regroupant une équipe de passionnés des technologies web avec une mission claire : transformer vos idées en réalités numériques performantes.',
             paragraph2: 'Forts de nos expertises complémentaires en Design, Développement Full Stack et Data Science, nous allions rigueur technique et créativité pour concevoir des solutions qui ne sont pas seulement esthétiques, mais qui génèrent de réels résultats business.',
-            paragraph3: 'En choisissant AppNet, vous bénéficiez d\'une équipe dédiée, d\'une communication fluide et d\'un engagement total sur la qualité et la performance de chaque projet que nous livrons.',
+            paragraph3: 'En choisissant appNets, vous bénéficiez d\'une équipe dédiée, d\'une communication fluide et d\'un engagement total sur la qualité et la performance de chaque projet que nous livrons.',
             stats: {
                 experts: 'Experts',
                 support: 'Support',
@@ -212,7 +212,7 @@ const translations = {
         // Contact Section
         contact: {
             title: 'Démarrons Votre Projet',
-            subtitle: 'Parlons de vos besoins et voyons comment AppNet peut vous aider',
+            subtitle: 'Parlons de vos besoins et voyons comment appNets peut vous aider',
             info: {
                 email: 'Email Professionnel',
                 whatsapp: 'WhatsApp',
@@ -262,7 +262,7 @@ const translations = {
         hero: {
             badge: 'Web Solutions Expert',
             greeting: 'Welcome to',
-            name: 'AppNet',
+            name: 'appNets',
             subtitle: 'Boost your business with modern web solutions',
             description: 'We help businesses grow through showcase websites, high-conversion landing pages, and custom web platforms.',
             ctaQuote: 'Get a Quote',
@@ -311,7 +311,7 @@ const translations = {
 
         // Why Choose Section
         whyChoose: {
-            title: 'Why Choose AppNet?',
+            title: 'Why Choose appNets?',
             subtitle: 'Your trusted digital partner for concrete results',
             items: {
                 customSolutions: {
@@ -433,11 +433,11 @@ const translations = {
 
         // About Section
         about: {
-            title: 'About AppNet',
+            title: 'About appNets',
             subtitle: 'Collective expertise at the service of your business',
-            paragraph1: 'AppNet is a digital agency bringing together a team of web technology enthusiasts with a clear mission: transforming your ideas into high-performing digital realities.',
+            paragraph1: 'appNets is a digital agency bringing together a team of web technology enthusiasts with a clear mission: transforming your ideas into high-performing digital realities.',
             paragraph2: 'With our complementary expertise in Design, Full Stack Development, and Data Science, we combine technical rigor and creativity to design solutions that are not only aesthetic but generate real business results.',
-            paragraph3: 'By choosing AppNet, you benefit from a dedicated team, fluid communication, and total commitment to the quality and performance of every project we deliver.',
+            paragraph3: 'By choosing appNets, you benefit from a dedicated team, fluid communication, and total commitment to the quality and performance of every project we deliver.',
             stats: {
                 experts: 'Experts',
                 support: 'Support',
@@ -455,7 +455,7 @@ const translations = {
         // Contact Section
         contact: {
             title: 'Let\'s Start Your Project',
-            subtitle: 'Let\'s talk about your needs and see how AppNet can help you',
+            subtitle: 'Let\'s talk about your needs and see how appNets can help you',
             info: {
                 email: 'Professional Email',
                 whatsapp: 'WhatsApp',
