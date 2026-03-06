@@ -132,6 +132,8 @@ const translations = {
                     title: 'Landing Page',
                     description: 'Page unique optimisée pour la conversion',
                     features: [
+                        'Nom de domaine offert (1 an)',
+                        'Hébergement & Déploiement (1 an)',
                         'Design moderne et responsive',
                         'Optimisation SEO de base',
                         'Formulaire de contact',
@@ -144,6 +146,8 @@ const translations = {
                     title: 'Site Vitrine',
                     description: 'Présence en ligne complète et professionnelle',
                     features: [
+                        'Nom de domaine offert (1 an)',
+                        'Hébergement & Déploiement (1 an)',
                         'Tout du package Landing Page',
                         'Multi-pages (5-10 pages)',
                         'Design premium personnalisé',
@@ -157,6 +161,8 @@ const translations = {
                     title: 'Plateforme Web',
                     description: 'Solution sur mesure complexe et scalable',
                     features: [
+                        'Nom de domaine offert (1 an)',
+                        'Hébergement & Déploiement (1 an)',
                         'Tout du package Site Vitrine',
                         'Application web complète',
                         'Dashboard administrateur',
@@ -375,6 +381,8 @@ const translations = {
                     title: 'Landing Page',
                     description: 'Conversion-optimized single page',
                     features: [
+                        'Free domain name (1 year)',
+                        'Hosting & Deployment (1 year)',
                         'Modern and responsive design',
                         'Basic SEO optimization',
                         'Contact form',
@@ -387,6 +395,8 @@ const translations = {
                     title: 'Showcase Website',
                     description: 'Complete and professional online presence',
                     features: [
+                        'Free domain name (1 year)',
+                        'Hosting & Deployment (1 year)',
                         'Everything in Landing Page',
                         'Multi-page (5-10 pages)',
                         'Custom premium design',
@@ -400,6 +410,8 @@ const translations = {
                     title: 'Web Platform',
                     description: 'Complex and scalable custom solution',
                     features: [
+                        'Free domain name (1 year)',
+                        'Hosting & Deployment (1 year)',
                         'Everything in Showcase Website',
                         'Complete web application',
                         'Admin dashboard',
